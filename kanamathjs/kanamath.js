@@ -2,6 +2,8 @@
 function kanamathCalc(str)
 {
 	// 優先度の逆順に右辺と左辺に分ける
+    var op = "*";
+
 	var tmp = str.split(/\*(.+)?/);
 	if(tmp.length === 1){
 		tmp = tmp[0].split(/\+(.+)?/);
@@ -17,7 +19,7 @@ function kanamathCalc(str)
 		tmp = tmp[0].split(/\|(.+)?/);
 		op = "|";
 	}
-	// 右辺と左辺
+	// 右と左
 	// 数値だったらretunする
 	if(tmp.length === 1){
 		return tmp[0];
