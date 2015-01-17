@@ -1,7 +1,7 @@
 // 優先順位 | & +  *
 function kanamathCalc(str)
 {
-	// 優先度の逆順に右辺と左辺に分ける
+	// 優先度の逆順に右と左に分ける
 	var op = "*";
 	var tmp = str.split(/\*(.+)?/);
 	if(tmp.length === 1){
